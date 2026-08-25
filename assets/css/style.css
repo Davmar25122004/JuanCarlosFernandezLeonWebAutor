@@ -1,10 +1,5 @@
 /* =====================================================================
-   Juan Carlos Fernández León — Sitio oficial
-   Paleta: Tinta & Pergamino
-   Estructura inspirada en la web de un autor (header nav, héroe,
-   novedades, noticias, newsletter) pero rediseñada de forma propia.
-   ===================================================================== */
-
+  
 /* ---------- Variables / Paleta ---------- */
 :root {
   --tinta:      #1B2A41;   /* azul tinta — texto principal */
