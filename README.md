@@ -40,44 +40,48 @@ El resto —los relatos y extractos, las citas, las fechas de agenda y el retrat
 | Dorado latón | `#B8860B` | Acento (botones, líneas, detalles)          |
 | Noche        | `#14202E` | Fondo del modo oscuro                       |
 
-Para cambiar la paleta entera, basta con editar las variables `:root` al principio de `assets/css/style.css`.
+Para cambiar la paleta entera, basta con editar las variables `:root` al principio de `web/assets/css/style.css`.
 
 ## Estructura de archivos
 
 ```
-TIO/
-├── index.html            Inicio (héroe, novedad, obra, relatos, premios, agenda)
-├── obra.html              Bibliografía, enlaza a la ficha de cada libro
-├── libro-oscuridad.html   Ficha de «Oscuridad en la luz»
-├── libro-tortuga.html     Ficha de «Los interiores de la tortuga»
-├── libro-sotanos.html     Ficha de «De sótanos y azoteas»
-├── relatos.html           Relatos y extractos para leer
-├── autor.html             Biografía y trayectoria
-├── contacto.html          Formulario y vía de contacto
-├── aviso-legal.html
-├── privacidad.html
-├── assets/
-│   ├── css/style.css      Paleta, modo claro/oscuro, responsive
-│   ├── js/main.js         Tema, menú móvil, animaciones, formulario
-│   └── img/                Portadas de los libros y foto del autor
-└── README.md
+JuanCarlosFernandezLeonWebAutor/
+├── README.md
+└── web/
+    ├── index.html            Inicio (héroe, novedad, obra, relatos, premios, agenda)
+    ├── obra.html              Bibliografía, enlaza a la ficha de cada libro
+    ├── libro-oscuridad.html   Ficha de «Oscuridad en la luz»
+    ├── libro-tortuga.html     Ficha de «Los interiores de la tortuga»
+    ├── libro-sotanos.html     Ficha de «De sótanos y azoteas»
+    ├── relatos.html           Relatos y extractos para leer
+    ├── autor.html             Biografía y trayectoria
+    ├── contacto.html          Formulario y vía de contacto
+    ├── aviso-legal.html
+    ├── privacidad.html
+    └── assets/
+        ├── css/style.css      Paleta, modo claro/oscuro, responsive
+        ├── js/main.js         Tema, menú móvil, animaciones, formulario
+        └── img/                Portadas de los libros y foto del autor
 ```
+
+Todo el código de la web vive en `web/`; en la raíz solo queda este README, para que sea lo primero que se vea al entrar al repositorio.
 
 ## Cómo verla en local
 
-Abriendo `index.html` directamente en el navegador ya funciona, pero para ver el comportamiento tal cual sería en producción (rutas, metaetiquetas, etc.) es mejor servirla con un servidor local:
+Abriendo `web/index.html` directamente en el navegador ya funciona, pero para ver el comportamiento tal cual sería en producción (rutas, metaetiquetas, etc.) es mejor servirla con un servidor local:
 
 ```bash
+cd web
 python -m http.server 8000
 # y luego abrir http://localhost:8000
 ```
 
 ## Despliegue
 
-Al tratarse de HTML/CSS/JS puro, se puede publicar en cualquier hosting estático:
+Al tratarse de HTML/CSS/JS puro, se puede publicar en cualquier hosting estático apuntando a la carpeta `web/`:
 
-- **Netlify o Vercel**: arrastrando la carpeta a su panel.
-- **GitHub Pages**: subiendo el repositorio y activando Pages.
+- **Netlify o Vercel**: arrastrando la carpeta `web/` a su panel.
+- **GitHub Pages**: activando Pages y configurando `web/` como carpeta de origen.
 
 Por ahora el proyecto vive solo en local. La idea a futuro es desplegarlo de forma definitiva y comprar y configurar un dominio propio para mi tío, en vez de depender de una URL genérica de hosting gratuito.
 
